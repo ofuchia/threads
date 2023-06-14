@@ -6,7 +6,7 @@
 ## Thread Arrays (20 points)
 Type in the attached program that uses pthreads and verify that it compiles and executes correctly. Modify the program to use a thread array rather than individual thread variables. Pass into your program the number of threads to create via command line arguments. The name of this program should be `threadarray.c`.  Here is an example:
 ```text
-mscherger@lovelace:OS-threadfun2$ ./threadarray 8
+--@lovelace:OS-threadfun2$ ./threadarray 8
 Thread 1 says Hello!
 Thread 2 says Hi!
 Thread 4 says Hi!
