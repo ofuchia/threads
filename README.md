@@ -15,7 +15,7 @@ Thread 7 says Hello!
 Thread 8 says Hi!
 Thread 6 says Hi!
 Thread 3 says Hello!
-mscherger@lovelace:OS-threadfun2$
+--@lovelace:OS-threadfun2$
 ```
 
 ---
@@ -23,14 +23,14 @@ mscherger@lovelace:OS-threadfun2$
 ## Threaded Statistics Calculator (20 points)
 Write a multithreaded program (using pthreads) that performs various statistical operations. The main thread will read integers from the command line and store them in an array. Separate threads will be created each will compute the following operations respectively: min, max, mean, median, mode, sample standard deviation. Each thread will compute their respective functions and return the result back to the main thread. The main thread will then print out the results in the order shown below. The name of this program should be `pthreadstatcalc.c` or `.cpp`. Here is an example:
 ```text
-mscherger@lovelace:OS-threadfun2$ ./pthreadstatcalc 1 20 300 41 51 68 79 80 81
+--@lovelace:OS-threadfun2$ ./pthreadstatcalc 1 20 300 41 51 68 79 80 81
 MIN:        1
 MAX:        300
 MEAN:       80.111
 MEDIAN:     68
 MODE:       NO MODE
 STD. DEV.:  87.141
-mscherger@lovelace:OS-threadfun2$
+--@lovelace:OS-threadfun2$
 ```
 
 ---
@@ -38,7 +38,7 @@ mscherger@lovelace:OS-threadfun2$
 ## Token Identifier (20 points)
 Write a program that accepts an unspecifed number of tokens (strings of characters) of unspecifed length on the command line. The main() function in this program will create four threads each running separate thread functions (uppercase, lowercase, number, and other). The threads should take turns printing their respective tokens supplied on the command line. The uppercase thread should print all tokens that start with an uppercase letter. The lowercase thread should print all tokens that start with a lowercase letter. The number thread should print out all tokens that are positive or negative integers. The other thread should print out other remaining tokens. Note that the main thread will output nothing - the output will be performed by the threads that `main()` creates. The output order of tokens/words must be the same as the input order on the command line.Your program should work for any phrase of any reasonable length, not just the one given in the example. Here is an example:
 ```text
-mscherger@lovelace:OS-threadfun2$ ./tokenid TCU Mens basketball overall standings is (18) wins !and! 9 losses. 42 - -42 = +84 -34a
+--@lovelace:OS-threadfun2$ ./tokenid TCU Mens basketball overall standings is (18) wins !and! 9 losses. 42 - -42 = +84 -34a
 UPPER:  TCU
 UPPER:  Mens
 LOWER:  basketball
@@ -56,7 +56,7 @@ NUMBER: -42
 OTHER:  =
 NUMBER: +84
 OTHER: -34a
-mscherger@lovelace:OS-threadfun2$
+--@lovelace:OS-threadfun2$
 ```
 Note: I will not test your program with apostrophes, but (double) quoted strings will be tested.
 
@@ -111,9 +111,9 @@ A single sudoku puzzle will be stored in a file; nine separate integers, one spa
 The output will be the string "FALSE" or "TRUE".  Here is an example:
 
 ```text
-mscherger@lovelace:OS-threadfun2$ ./sudokuvalidator one.txt
+--@lovelace:OS-threadfun2$ ./sudokuvalidator one.txt
 TRUE
-mscherger@lovelace:OS-threadfun2$
+--@lovelace:OS-threadfun2$
 ```
 
 The name of your program must be `sudokuvalidator.c` or `.cpp`.
