@@ -126,14 +126,4 @@ Develop a Makefile that is capable of building all four of your programs with ju
 ---
 
 ## Documentation (10 points)
-Make sure each of your programs are well documented.  Follow the documentation standard as posted on TCU Online.
-
----
-
-## Other
-+ This is an individual project.
-+ Your programs will be compared with each other using MOSS.
-+ You will have to create your own test data.
-+ I will test your programs on `lovelace.cs.tcu.edu`.
-+ This project is worth 100 points.
-+ Be sure to update your git repo regularly!!!  No excuses.
+Make sure each of your programs are well documented.  Follow the documentation standard as posted on Online.
