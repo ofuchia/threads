@@ -1,13 +1,4 @@
 //*********************************************************
-// Ofuchinyelu Akpom
-// Operating Systems
-// Playing with threads: thread array
-// Feb 28, 2023
-// Instructor: Dr. Scherger
-//*********************************************************
-
-
-//*********************************************************
 //
 // Includes and Defines
 //
