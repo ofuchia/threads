@@ -1,23 +1,6 @@
 # Programming with Ptheads
 ---
 
-## Thread Arrays
-Using pthreads and verify that it compiles and executes correctly. Modify the program to use a thread array rather than individual thread variables. Pass into your program the number of threads to create via command line arguments. The name of this program should be `threadarray.c`.  Here is an example:
-```text
---@lovelace:OS-threadfun2$ ./threadarray 8
-Thread 1 says Hello!
-Thread 2 says Hi!
-Thread 4 says Hi!
-Thread 5 says Hello!
-Thread 7 says Hello!
-Thread 8 says Hi!
-Thread 6 says Hi!
-Thread 3 says Hello!
---@lovelace:OS-threadfun2$
-```
-
----
-
 ## Threaded Statistics Calculator
 A multithreaded program (using pthreads) that performs various statistical operations. The main thread will read integers from the command line and store them in an array. Separate threads will be created each will compute the following operations respectively: min, max, mean, median, mode, sample standard deviation. Each thread will compute their respective functions and return the result back to the main thread. The main thread will then print out the results in the order shown below. The name of this program should be `pthreadstatcalc.c` or `.cpp`. Here is an example:
 ```text
