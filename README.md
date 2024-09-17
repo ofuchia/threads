@@ -1,10 +1,8 @@
 # Programming with Ptheads
-## Operating Systems
-
 ---
 
-## Thread Arrays (20 points)
-Type in the attached program that uses pthreads and verify that it compiles and executes correctly. Modify the program to use a thread array rather than individual thread variables. Pass into your program the number of threads to create via command line arguments. The name of this program should be `threadarray.c`.  Here is an example:
+## Thread Arrays
+Using pthreads and verify that it compiles and executes correctly. Modify the program to use a thread array rather than individual thread variables. Pass into your program the number of threads to create via command line arguments. The name of this program should be `threadarray.c`.  Here is an example:
 ```text
 --@lovelace:OS-threadfun2$ ./threadarray 8
 Thread 1 says Hello!
@@ -20,8 +18,8 @@ Thread 3 says Hello!
 
 ---
 
-## Threaded Statistics Calculator (20 points)
-Write a multithreaded program (using pthreads) that performs various statistical operations. The main thread will read integers from the command line and store them in an array. Separate threads will be created each will compute the following operations respectively: min, max, mean, median, mode, sample standard deviation. Each thread will compute their respective functions and return the result back to the main thread. The main thread will then print out the results in the order shown below. The name of this program should be `pthreadstatcalc.c` or `.cpp`. Here is an example:
+## Threaded Statistics Calculator
+A multithreaded program (using pthreads) that performs various statistical operations. The main thread will read integers from the command line and store them in an array. Separate threads will be created each will compute the following operations respectively: min, max, mean, median, mode, sample standard deviation. Each thread will compute their respective functions and return the result back to the main thread. The main thread will then print out the results in the order shown below. The name of this program should be `pthreadstatcalc.c` or `.cpp`. Here is an example:
 ```text
 --@lovelace:OS-threadfun2$ ./pthreadstatcalc 1 20 300 41 51 68 79 80 81
 MIN:        1
@@ -35,8 +33,8 @@ STD. DEV.:  87.141
 
 ---
 
-## Token Identifier (20 points)
-Write a program that accepts an unspecifed number of tokens (strings of characters) of unspecifed length on the command line. The main() function in this program will create four threads each running separate thread functions (uppercase, lowercase, number, and other). The threads should take turns printing their respective tokens supplied on the command line. The uppercase thread should print all tokens that start with an uppercase letter. The lowercase thread should print all tokens that start with a lowercase letter. The number thread should print out all tokens that are positive or negative integers. The other thread should print out other remaining tokens. Note that the main thread will output nothing - the output will be performed by the threads that `main()` creates. The output order of tokens/words must be the same as the input order on the command line.Your program should work for any phrase of any reasonable length, not just the one given in the example. Here is an example:
+## Token Identifier
+A program that accepts an unspecifed number of tokens (strings of characters) of unspecifed length on the command line. The main() function in this program will create four threads each running separate thread functions (uppercase, lowercase, number, and other). The threads should take turns printing their respective tokens supplied on the command line. The uppercase thread should print all tokens that start with an uppercase letter. The lowercase thread should print all tokens that start with a lowercase letter. The number thread should print out all tokens that are positive or negative integers. The other thread should print out other remaining tokens. Note that the main thread will output nothing - the output will be performed by the threads that `main()` creates. The output order of tokens/words must be the same as the input order on the command line.Your program should work for any phrase of any reasonable length, not just the one given in the example. Here is an example:
 ```text
 --@lovelace:OS-threadfun2$ ./tokenid TCU Mens basketball overall standings is (18) wins !and! 9 losses. 42 - -42 = +84 -34a
 UPPER:  TCU
@@ -58,24 +56,19 @@ NUMBER: +84
 OTHER: -34a
 --@lovelace:OS-threadfun2$
 ```
-Note: I will not test your program with apostrophes, but (double) quoted strings will be tested.
-
-Note: For this problem you are *not permitted* to use synchronization primitives such as mutexes or semaphores for thread coordination. You can use `sched_yield()` to relinquish control of the CPU. 
-
-The name of your program must be `tokenid.c` or `.cpp`.
-
+The name of your program is either `tokenid.c` or `.cpp`.
 ---
 
-## Sudoku Solution Validator (20 points)
-A sudoku puzzle uses a 9 x 9 grid in which each column and row , as well as eah of the nine 3 x 3 subgrids, must contain all the digits 1..9.  You will write a multithreaded program that determines whether the solution to a sudoku puzzle is valid.
+## Sudoku Solution Validator
+A multithreaded program that determines whether the solution to a sudoku puzzle is valid. The sudoku puzzle uses a 9 x 9 grid in which each column and row, as well as eah of the nine 3 x 3 subgrids, must contain all the digits 1 to 9. 
 
-For this program, your solution must include:
+This program has:
 + Nine separate threads and each thread will check one column that it contains the digits 1..9.
 + Nine separate threads and each thread will check one row that it contains the digits 1..9.
 + Nine separate threads and each thread will check one 3 x 3 subgrid that it contains the digits 1..9.
 
 ### Passing Parameters to Each Thread
-The parent thread will create the worker threads, passing each worker the location that it must check in the sudoku grid.  This step will require passing several parameters to each thread.  The easiest approach is to create a data structure using a `struct`.  For ecample, a structure to pass the row and column where the thread must begin validating would appear as follows:
+The parent thread will create the worker threads, passing each worker the location that it must check in the sudoku grid.  This step will require passing several parameters to each thread.  The easiest approach is to create a data structure using a `struct`.  For example, a structure to pass the row and column where the thread must begin validating would appear as follows:
 ```c
 // structure for passing data to threads
 typedef struct{
@@ -116,14 +109,9 @@ TRUE
 --@lovelace:OS-threadfun2$
 ```
 
-The name of your program must be `sudokuvalidator.c` or `.cpp`.
+The name of your will be `sudokuvalidator.c` or `.cpp`.
 
 ---
 
-## Makefile (10 points)
-Develop a Makefile that is capable of building all four of your programs with just a single `make` command.  Also include a `clean` target to remove all executables and object files.
-
----
-
-## Documentation (10 points)
-Make sure each of your programs are well documented.  Follow the documentation standard as posted on Online.
+## Makefile
+A Makefile that is capable of building all four of your programs with just a single `make` command.  Also include a `clean` target to remove all executables and object files.
