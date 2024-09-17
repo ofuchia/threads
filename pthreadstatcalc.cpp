@@ -1,13 +1,4 @@
 //*********************************************************
-// Ofuchinyelu Akpom
-// Operating Systems
-// Playing with threads: pthread calculator
-// March 5, 2023
-// Instructor: Dr. Scherger
-//*********************************************************
-
-
-//*********************************************************
 //
 // Includes and Defines
 //
