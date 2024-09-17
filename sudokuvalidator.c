@@ -1,13 +1,4 @@
 //*********************************************************
-// Ofuchinyelu Akpom
-// Operating Systems
-// Playing with threads: sudoku validator
-// March 6, 2023
-// Instructor: Dr. Scherger
-//*********************************************************
-
-
-//*********************************************************
 //
 // Includes and Defines
 //
